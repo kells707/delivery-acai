@@ -23,4 +23,4 @@ Este é um projeto de um site para um serviço de delivery de açaí, desenvolvi
 
 1. **Clone este repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/delivery-acai.git
+   git clone https://github.com/kells707/delivery-acai.git
