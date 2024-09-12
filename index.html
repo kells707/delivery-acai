@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery de Açaí</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ30wz4HwEwfFQpWeYxwa8MGxQ9nqsFdEyapg&s" alt="Logo do Delivery de Açaí">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#order">Fazer Pedido</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="carousel">
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY32kQVtDSnnoe34vEG6TG-OOsi7iXo9FFiA&s" alt="Promoção 1"></div>
+            <div><img src="https://i0.wp.com/barbarariboldi.com.br/wp-content/uploads/2017/01/acaibatido.jpg?fit=624%2C390" alt="Promoção 2"></div>
+            <div><img src="https://static.itdg.com.br/images/360-240/829b5e3da00d880270ee4223c8e7a948/298008-original.jpg" alt="Promoção 3"></div>
+        </div>
+        <h1>Bem-vindo ao Delicias no copo</h1>
+        <p>O melhor açaí da região entregue na sua casa.</p>
+        <button onclick="scrollToProducts()">Ver Produtos</button>
+    </section>
+
+    <section id="products" class="products-section">
+        <h2>Nossos Produtos</h2>
+        <div class="product-list">
+            <div class="product-item" data-product-value="15">
+                <img src="https://www.saborama.com.br/wp-content/uploads/2014/05/original-home_creme_da_a-a-_na_tigela.jpg20170928-537-14yw5d4.jpg" alt="Açaí Tradicional">
+                <h3>Açaí Tradicional</h3>
+                <p>A partir de R$15,00</p>
+                <div class="rating">
+                    ★★★★☆ (4.0)
+                </div>
+            </div>
+            <div class="product-item" data-product-value="18">
+                <img src="https://as2.ftcdn.net/v2/jpg/02/17/19/95/1000_F_217199590_Wjc8nr703ByqvUge6eDbQhMxxVGZodsB.jpg" alt="Açaí com Frutas">
+                <h3>Açaí com Frutas</h3>
+                <p>A partir de R$18,00</p>
+                <div class="rating">
+                    ★★★★★ (5.0)
+                </div>
+            </div>
+            <div class="product-item" data-product-value="17">
+                <img src="https://cdn0.tudoreceitas.com/pt/posts/0/8/0/acai_com_cupuacu_9080_orig.jpg" alt="Açaí com Granola">
+                <h3>Açaí com Granola</h3>
+                <p>A partir de R$17,00</p>
+                <div class="rating">
+                    ★★★★☆ (4.5)
+                </div>
+            </div>
+            <div class="product-item" data-product-value="20">
+                <img src="https://s3-sa-east-1.amazonaws.com/deliveryon-uploads/products/summer/41_5f4ade754e274.jpeg" alt="Açaí com Nutella">
+                <h3>Açaí com Nutella</h3>
+                <p>A partir de R$20,00</p>
+                <div class="rating">
+                    ★★★★☆ (4.3)
+                </div>
+            </div>
+            <div class="product-item" data-product-value="22">
+                <img src="https://static.ifood-static.com.br/image/upload/t_high/pratos/61e13b32-7625-4d04-9caa-3d1b46959bee/202205191527_0XG0_i.jpg" alt="Açaí com Kit Kat">
+                <h3>Açaí com Kit Kat</h3>
+                <p>A partir de R$22,00</p>
+                <div class="rating">
+                    ★★★★★ (5.0)
+                </div>
+            </div>
+            <div class="product-item" data-product-value="19">
+                <img src="https://s2-casaejardim.glbimg.com/su03ntoBrWmPJNK_Ei6tgomjbZ4=/0x0:1400x1027/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_a0b7e59562ef42049f4e191fe476fe7d/internal_photos/bs/2022/W/6/l7thART0qmpulV2YLqKg/receita-acai-biscoito-bolacha-oreo-chocolate-ovomaltine-acai-purissimo.png" alt="Açaí com Ovomaltine">
+                <h3>Açaí com Ovomaltine</h3>
+                <p>A partir de R$19,00</p>
+                <div class="rating">
+                    ★★★★☆ (4.7)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <h2>Faça seu Pedido</h2>
+        <form id="order-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="product">Escolha seu Açaí:</label>
+            <select id="product" name="product" required>
+                <option value="15">Açaí Tradicional - R$15,00</option>
+                <option value="18">Açaí com Frutas - R$18,00</option>
+                <option value="17">Açaí com Granola - R$17,00</option>
+                <option value="20">Açaí com Nutella - R$20,00</option>
+                <option value="22">Açaí com Kit Kat - R$22,00</option>
+                <option value="19">Açaí com Ovomaltine - R$19,00</option>
+            </select>
+
+            <label for="size">Tamanho:</label>
+            <select id="size" name="size" required>
+                <option value="0">Pequeno - 300ml (R$0,00)</option>
+                <option value="5">Médio - 500ml (+R$5,00)</option>
+                <option value="8">Grande - 750ml (+R$8,00)</option>
+            </select>
+
+            <label for="add-ons">Acompanhamentos:</label>
+            <div id="add-ons">
+                <div class="addon">
+                    <input type="checkbox" id="granola" name="add-ons" value="2">
+                    <label for="granola">Granola</label>
+                    <input type="number" id="granola-qty" name="granola-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="leite-condensado" name="add-ons" value="2">
+                    <label for="leite-condensado">Leite Condensado</label>
+                    <input type="number" id="leite-condensado-qty" name="leite-condensado-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="paçoca" name="add-ons" value="2">
+                    <label for="paçoca">Paçoca</label>
+                    <input type="number" id="paçoca-qty" name="paçoca-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="oreo" name="add-ons" value="2">
+                    <label for="oreo">Biscoito Oreo</label>
+                    <input type="number" id="oreo-qty" name="oreo-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="nutella" name="add-ons" value="5">
+                    <label for="nutella">Nutella - R$5,00</label>
+                    <input type="number" id="nutella-qty" name="nutella-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="ovomaltine" name="add-ons" value="2">
+                    <label for="ovomaltine">Ovomaltine</label>
+                    <input type="number" id="ovomaltine-qty" name="ovomaltine-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="banana" name="add-ons" value="2">
+                    <label for="banana">Banana</label>
+                    <input type="number" id="banana-qty" name="banana-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="morango" name="add-ons" value="2">
+                    <label for="morango">Morango</label>
+                    <input type="number" id="morango-qty" name="morango-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="kiwi" name="add-ons" value="2">
+                    <label for="kiwi">Kiwi</label>
+                    <input type="number" id="kiwi-qty" name="kiwi-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="chocoball" name="add-ons" value="2">
+                    <label for="chocoball">Chocoball</label>
+                    <input type="number" id="chocoball-qty" name="chocoball-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="kitkat" name="add-ons" value="5">
+                    <label for="kitkat">Kit Kat - R$5,00</label>
+                    <input type="number" id="kitkat-qty" name="kitkat-qty" value="1" min="1" class="qty">
+                </div>
+                <div class="addon">
+                    <input type="checkbox" id="salada-frutas" name="add-ons" value="2">
+                    <label for="salada-frutas">Salada de Frutas</label>
+                    <input type="number" id="salada-frutas-qty" name="salada-frutas-qty" value="1" min="1" class="qty">
+                </div>
+            </div>
+
+            <h3>Total: R$ <span id="total-price">0.00</span></h3>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco caso tenha alguma dúvida:</p>
+        <p>Telefone: (99) 9999-9999</p>
+        <p>Email: contato@deliverydeacai.com</p>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

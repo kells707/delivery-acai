@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8B3A62;
+    color: #333;
+}
+
+header {
+    background-color: #8B3A62;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF5733;
+}
+
+.home-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-size: cover;
+    color: white;
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+.carousel img {
+    max-width: 90%; 
+    max-height: 500px; 
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.home-section h1 {
+    font-size: 3em; 
+    font-weight: bold; 
+    color: #FFFFFF; 
+}
+
+.home-section p {
+    font-size: 1.2em; 
+}
+
+.home-section button {
+    padding: 12px 24px; 
+    background-color: #FF5733;
+    border: none;
+    color: white;
+    font-size: 1.2em; 
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.home-section button:hover {
+    background-color: #C13B23;
+    transform: scale(1.1); 
+}
+
+.products-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.product-item h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+    color: #8B3A62;
+}
+
+.product-item p {
+    font-size: 1.2em;
+    color: #666;
+}
+.rating {
+    font-size: 1.2em;
+    color: #FFD700; 
+    margin-top: 10px;
+}
+
+
+.order-section form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.order-section form:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.order-section form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.order-section form input,
+.order-section form select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add-ons {
+    display: flex;
+    flex-direction: column;
+}
+
+.addon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.addon input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.addon label {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.qty {
+    width: 50px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.order-section form h3 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.order-section form button {
+    padding: 10px;
+    background-color: #8B3A62;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.order-section form button:hover {
+    background-color: #6B2A49;
+}
+
+.contact-section {
+    background-color: #8B3A62;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 80%;
+    }
+
+    .order-section form {
+        width: 80%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-section h1 {
+        font-size: 2em; 
+    }
+
+    .product-item {
+        width: 90%; 
+    }
+
+    .carousel img {
+        max-height: 300px; 
+    }
+}
+.product-item.selected {
+    border: 2px solid #FF5733; 
+    box-shadow: 0 8px 16px rgba(255, 87, 51, 0.3); 
+}
+.order-section form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+nav ul li a.active {
+    color: #FF5733;
+    text-decoration: underline;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .product-item {
+        width: 45%;
+    }
+}
+.product-item.selected {
+    background-color: #FFEBE6; 
+    transition: background-color 0.3s ease-in-out;
+}
+.product-item {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.home-section button {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
